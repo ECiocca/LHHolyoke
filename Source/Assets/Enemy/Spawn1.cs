@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn2 : MonoBehaviour
+public class Spawn1 : MonoBehaviour
 {
     public GameObject Enemy;
     public GameObject SpawnPoint1;
