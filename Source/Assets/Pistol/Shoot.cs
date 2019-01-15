@@ -21,7 +21,7 @@ public class Shoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0))
         {
             GameObject go = GameObject.Instantiate(Bullet);
             //go.transform.position = this.transform.position + (transform.up*up);
