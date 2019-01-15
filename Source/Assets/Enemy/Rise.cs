@@ -5,7 +5,6 @@ using UnityEngine;
 public class Rise : MonoBehaviour {
     public Transform target;
     public float speed = 1.0f;
-    public float huntdistance = 30.0f;
     public float distance;
     public float Risespeed;
     public float Maxy;
@@ -17,25 +16,27 @@ public class Rise : MonoBehaviour {
 	
 	// Update is called once per fram
 	void Update () {
-        
 
-        
+
+
         if (this.transform.position.y <= Maxy)
-        {
-            this.transform.position += new Vector3(0,Risespeed,0);
-            if (this.transform.position.y >= Maxy)
-                Rose = 1;
-            Debug.Log("RISING");
-              }
+            if (Rose == 0)
+            {
+                {
+                    this.transform.position += new Vector3(0, Risespeed, 0);
+                    if (this.transform.position.y >= Maxy)
+                        Rose = 1;
+                    Debug.Log("RISING");
+                }
+            }
         distance = (this.transform.position - target.position).magnitude;
-        if (distance <= huntdistance)
-        {
+        
             if (Rose == 1)
             {
                 transform.LookAt(target);
                 transform.localPosition += transform.forward * Time.deltaTime * speed;
             }
-        }
+        
 
     }
 }

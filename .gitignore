@@ -3,3 +3,11 @@ Source/Temp/
 Source/Builds/
 Source/.vs/
 Source/ProjectSettings/ProjectVersion\.txt
+
+*.csproj
+
+Source/Packages/manifest\.json
+
+Source/Source\.sln
+
+Source/obj/Debug/
