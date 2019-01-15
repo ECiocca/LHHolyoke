@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public float lifespan = 2.0F;
+    public AudioClip nuke;
+    public AudioSource soundPlayer;
 
 	// Use this for initialization
 	void Start () {
         Invoke("Destroy",lifespan);
-		
-	}
+        soundPlayer.clip = nuke;
+        soundPlayer.Play();
+
+
+
+    }
 
     // Update is called once per frame
     void Destroy()

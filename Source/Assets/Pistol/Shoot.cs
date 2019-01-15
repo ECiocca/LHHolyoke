@@ -13,6 +13,9 @@ public class Shoot : MonoBehaviour {
     public float Xrot = 0F;
     public float Yrot = 90F;
     public float Zrot = 0F;
+    public AudioClip nuke;
+    public AudioSource m_AudioSource;
+
 
     // Use this for initialization
     void Start () {
@@ -28,6 +31,10 @@ public class Shoot : MonoBehaviour {
             //go.GetComponent<Rigidbody>().AddForce(Quaternion.Euler(Xrot,Yrot,Zrot)*this.transform.forward*speed, ForceMode.Impulse);
             go.transform.position = Gunend.transform.position;
             go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) *speed, ForceMode.Impulse);
+
+            m_AudioSource.clip = nuke;
+            m_AudioSource.Play();
+
 
         }
 
