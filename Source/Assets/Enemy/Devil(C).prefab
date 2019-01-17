@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114203244573511774}
   - component: {fileID: 54573880667639422}
   - component: {fileID: 114755804122624856}
-  - component: {fileID: 114286267144827766}
+  - component: {fileID: 114249142390859984}
   m_Layer: 0
   m_Name: Devil(C)
   m_TagString: Untagged
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 1639502385597096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -459.04813, y: 32.3, z: 254.64781}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4019835872679738}
   m_Father: {fileID: 0}
@@ -439,11 +439,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff34556b5ede0d43b8e8bf6c1fc5cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 10
+  target: {fileID: 4030193626573970, guid: 6e6e9945f0f5ae945b99bc7b62611dad, type: 2}
+  speed: 13
   huntdistance: 300
   distance: 0
---- !u!114 &114286267144827766
+--- !u!114 &114249142390859984
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,11 +454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16591aabd0c9bcf48835f9060cba4700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 13
+  target: {fileID: 4030193626573970, guid: 6e6e9945f0f5ae945b99bc7b62611dad, type: 2}
+  speed: 0
   distance: 0
-  Risespeed: 0.2
-  Maxy: 7
+  Risespeed: 0.05
+  Maxy: 25
   Rose: 0
 --- !u!114 &114755804122624856
 MonoBehaviour:
