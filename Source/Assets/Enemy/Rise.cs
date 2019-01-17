@@ -11,8 +11,10 @@ public class Rise : MonoBehaviour {
     public float Rose;
     // Use this for initialization
     void Start () {
-		
-	}
+        Chase script = GetComponent<Chase>();
+        script.enabled = false;
+
+    }
 	
 	// Update is called once per fram
 	void Update () {
@@ -26,15 +28,15 @@ public class Rise : MonoBehaviour {
                     this.transform.position += new Vector3(0, Risespeed, 0);
                     if (this.transform.position.y >= Maxy)
                         Rose = 1;
-                    Debug.Log("RISING");
                 }
             }
         distance = (this.transform.position - target.position).magnitude;
         
             if (Rose == 1)
             {
-                transform.LookAt(target);
-                transform.localPosition += transform.forward * Time.deltaTime * speed;
+            Debug.Log("CHASE");
+            Chase script = GetComponent<Chase>();
+            script.enabled = true;
             }
         
 
