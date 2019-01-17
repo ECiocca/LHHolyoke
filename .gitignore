@@ -2,8 +2,7 @@ Source/Library/
 Source/Temp/
 Source/Builds/
 Source/.vs/
-Source/ProjectSettings/ProjectVersion\.txt
-*.csproj
-*.sln
+Source/*.csproj
+Source/*.sln
 Source/Packages/manifest\.json
 Source/obj/
