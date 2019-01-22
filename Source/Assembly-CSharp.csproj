@@ -115,6 +115,7 @@
     <Compile Include="Assets\Scripts\Audio\MusicItem.cs" />
     <Compile Include="Assets\Scripts\Audio\SFXController.cs" />
     <Compile Include="Assets\Scripts\HelloWorld.cs" />
+    <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\Stub.cs" />
     <Compile Include="Assets\Scripts\Utils\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Utils\SingletonBehavior.cs" />
