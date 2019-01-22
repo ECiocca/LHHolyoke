@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4269705513999644}
   - component: {fileID: 114546661965935500}
+  - component: {fileID: 114611415453631590}
   m_Layer: 0
   m_Name: MusicController
   m_TagString: Untagged
@@ -482,6 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 8300000, guid: cf1734ee908ad458082e8fee4be3a0b3, type: 3}
   id: levelc
+  bLoop: 1
 --- !u!114 &114154980411405124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,6 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 8300000, guid: 69e084439842847d7b583a2eda908539, type: 3}
   id: leveld
+  bLoop: 1
 --- !u!114 &114463330795958686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,6 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 8300000, guid: bfb4b3e28a71a4071ae804ec0f779c8d, type: 3}
   id: levela
+  bLoop: 1
 --- !u!114 &114546661965935500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -519,14 +523,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb31b72fb41a24c80b8f2141a6217b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool:
-  - id: 0
-    src: []
-    bLoop: 0
+  curMainAudioSource: 0
   musicAudioSources:
   - {fileID: 82598546452913236}
   - {fileID: 82180624299732796}
-  curMainAudioSource: 0
+--- !u!114 &114611415453631590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134060813334624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d459c20aff19a4ea6bc820c427c55cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114739941139683374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -540,6 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 8300000, guid: 111e0230cf58e422484240408573d408, type: 3}
   id: title
+  bLoop: 1
 --- !u!114 &114879084166309972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -553,3 +565,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 8300000, guid: 31786e55b606e4223a4f0b642c2618ae, type: 3}
   id: levelb
+  bLoop: 1

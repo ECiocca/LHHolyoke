@@ -12,10 +12,17 @@ public class MusicController : SingletonBehavior<MusicController> {
 
     string _currentTrack = "";
 
-    public AudioSource[] musicAudioSources = new AudioSource[2];
+
     public int curMainAudioSource = 0;
 
     const float kfMaxVol = 0.5F;
+
+    const float kfQuietPerc = 0.5F;
+    const float kfFullVolume = kfMaxVol;
+
+    public AudioSource[] musicAudioSources = new AudioSource[2];
+    float[] fAudioVolume = new float[] { kfMaxVol, kfMaxVol };
+
 
     bool _bPlaying = false;
 
@@ -86,12 +93,11 @@ public class MusicController : SingletonBehavior<MusicController> {
                 bQuiet = true;
             }
         }
-        const float kfQuietVolume = 0.5F;
-        const float kfFullVolume = 1.0F;
 
-        musicAudioSources[0].volume = (bQuiet) ? kfQuietVolume : kfFullVolume;
-        musicAudioSources[1].volume = (bQuiet) ? kfQuietVolume : kfFullVolume;
 
+
+            musicAudioSources[0].volume = (bQuiet) ? fAudioVolume[0]* kfQuietPerc : fAudioVolume[0];
+            musicAudioSources[1].volume = (bQuiet) ? fAudioVolume[1]* kfQuietPerc : fAudioVolume[1];
 
         if (_bPlaying && !musicAudioSources[curMainAudioSource].isPlaying)
         {
@@ -173,12 +179,12 @@ public class MusicController : SingletonBehavior<MusicController> {
 //        Debug.Log("CHANGE MUSIC : " + ac.name);
         if (!isCrossfading)
         {
-            StartCoroutine(FadeOut(musicAudioSources[curMainAudioSource]));
+            StartCoroutine(FadeOut(curMainAudioSource, musicAudioSources[curMainAudioSource]));
             curMainAudioSource = (curMainAudioSource+1)%2;
             musicAudioSources[curMainAudioSource].clip = ac;
-            musicAudioSources[curMainAudioSource].volume = 0;
+            fAudioVolume[curMainAudioSource] = 0;
             musicAudioSources[curMainAudioSource].Play();
-            StartCoroutine(FadeIn(musicAudioSources[curMainAudioSource]));
+            StartCoroutine(FadeIn(curMainAudioSource, musicAudioSources[curMainAudioSource]));
             isCrossfading = true;
         }
         //If we try to switch tracks while still cross-fading (should only happen on load?)
@@ -194,29 +200,29 @@ public class MusicController : SingletonBehavior<MusicController> {
 
     private static float FADE_RATE = 1.75f;
 
-    IEnumerator FadeOut(AudioSource a)
+    IEnumerator FadeOut(int idx, AudioSource a)
     {
-        while( a.volume > 0.1 )
+        while(fAudioVolume[idx] > 0.1 )
         {
-            a.volume = Mathf.Lerp( a.volume, 0.0f, FADE_RATE * Time.deltaTime );
+            fAudioVolume[idx] = Mathf.Lerp(fAudioVolume[idx], 0.0f, FADE_RATE * Time.deltaTime );
             yield return null;
         }
 
         // Close enough, turn it off!
-        a.volume = 0.0f;
+        fAudioVolume[idx] = 0.0f;
         a.Stop();
         isCrossfading = false;
     }
 
-    IEnumerator FadeIn(AudioSource a)
+    IEnumerator FadeIn(int idx, AudioSource a)
     {
-        while( a.volume< kfMaxVol*0.9F)
+        while(fAudioVolume[idx] < kfMaxVol*0.9F)
         {
-            a.volume = Mathf.Lerp( a.volume, kfMaxVol, FADE_RATE * Time.deltaTime);
+            fAudioVolume[idx] = Mathf.Lerp(fAudioVolume[idx], kfMaxVol, FADE_RATE * Time.deltaTime);
             yield return null;
         }
- 
+
         // Close enough, turn it on!
-        a.volume = kfMaxVol;
+        fAudioVolume[idx] = kfMaxVol;
     }
 }
