@@ -61,12 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Enemy\BulletKill.cs" />
-    <Compile Include="Assets\Enemy\Chase.cs" />
-    <Compile Include="Assets\Enemy\Rise.cs" />
-    <Compile Include="Assets\Enemy\Spawn1.cs" />
-    <Compile Include="Assets\Enemy\Spawn4.cs" />
-    <Compile Include="Assets\Enemy\Spawn6.cs" />
     <Compile Include="Assets\FPSCode\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\FPSCode\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
     <Compile Include="Assets\FPSCode\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
@@ -108,8 +102,14 @@
     <Compile Include="Assets\FPSCode\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\Grounds\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\Grounds\Portal.cs" />
-    <Compile Include="Assets\Pistol\Bullet.cs" />
-    <Compile Include="Assets\Pistol\Shoot.cs" />
+    <Compile Include="Assets\Level Prefabs\Enemy\BulletKill.cs" />
+    <Compile Include="Assets\Level Prefabs\Enemy\Chase.cs" />
+    <Compile Include="Assets\Level Prefabs\Enemy\Rise.cs" />
+    <Compile Include="Assets\Level Prefabs\Enemy\Spawn1.cs" />
+    <Compile Include="Assets\Level Prefabs\Enemy\Spawn4.cs" />
+    <Compile Include="Assets\Level Prefabs\Enemy\Spawn6.cs" />
+    <Compile Include="Assets\Level Prefabs\Player\Pistol\Bullet.cs" />
+    <Compile Include="Assets\Level Prefabs\Player\Pistol\Shoot.cs" />
     <Compile Include="Assets\Scripts\HelloWorld.cs" />
     <Compile Include="Assets\Scripts\Stub.cs" />
     <Compile Include="Assets\Scripts\WorldLevel.cs" />

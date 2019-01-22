@@ -765,7 +765,7 @@ MeshFilter:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1044418441611156, guid: ff44504dbf1e64d77be0a4605ab94b79,
     type: 2}
-  m_PrefabInternal: {fileID: 1681596057}
+  m_PrefabInternal: {fileID: 1672600663}
 --- !u!1 &172551495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1256,36 @@ Prefab:
     - target: {fileID: 4030193626573970, guid: e6869837e3c1668488c614940b87ef78, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 20649461692118962, guid: e6869837e3c1668488c614940b87ef78,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20649461692118962, guid: e6869837e3c1668488c614940b87ef78,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20649461692118962, guid: e6869837e3c1668488c614940b87ef78,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20649461692118962, guid: e6869837e3c1668488c614940b87ef78,
+        type: 2}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 20649461692118962, guid: e6869837e3c1668488c614940b87ef78,
+        type: 2}
+      propertyPath: far clip plane
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 20649461692118962, guid: e6869837e3c1668488c614940b87ef78,
+        type: 2}
+      propertyPath: m_Depth
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6869837e3c1668488c614940b87ef78, type: 2}
@@ -3552,7 +3582,7 @@ Prefab:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1544570852165910, guid: ff44504dbf1e64d77be0a4605ab94b79,
     type: 2}
-  m_PrefabInternal: {fileID: 1681596057}
+  m_PrefabInternal: {fileID: 1672600663}
 --- !u!1 &1624849825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3622,7 +3652,7 @@ Transform:
   m_Father: {fileID: 2130631424}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1681596057
+--- !u!1001 &1672600663
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3666,7 +3696,7 @@ Prefab:
       propertyPath: Target
       value: 
       objectReference: {fileID: 1983624704}
-    - target: {fileID: 114145602985279062, guid: ff44504dbf1e64d77be0a4605ab94b79,
+    - target: {fileID: 114644429572360320, guid: ff44504dbf1e64d77be0a4605ab94b79,
         type: 2}
       propertyPath: Player
       value: 
