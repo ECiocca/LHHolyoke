@@ -6,3 +6,5 @@ Source/*.csproj
 Source/*.sln
 Source/Packages/manifest\.json
 Source/obj/
+
+*.csproj
