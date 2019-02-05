@@ -113,6 +113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifespan: 10
+  nuke: {fileID: 0}
+  soundPlayer: {fileID: 3258615248517749067, guid: 1331ce8389165a84db0f543aab452bba,
+    type: 2}
 --- !u!135 &135611140716262292
 SphereCollider:
   m_ObjectHideFlags: 1
