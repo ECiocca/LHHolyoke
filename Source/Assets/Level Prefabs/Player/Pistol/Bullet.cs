@@ -10,9 +10,11 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Invoke("Destroy",lifespan);
-        soundPlayer.clip = nuke;
-        soundPlayer.Play();
-
+        if (soundPlayer != null)
+        {
+            soundPlayer.clip = nuke;
+            soundPlayer.Play();
+        }
 
 
     }
