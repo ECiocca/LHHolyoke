@@ -34,7 +34,7 @@ public class Rise : MonoBehaviour {
         
             if (Rose == 1)
             {
-            Debug.Log("CHASE");
+            
             Chase script = GetComponent<Chase>();
             script.enabled = true;
             }

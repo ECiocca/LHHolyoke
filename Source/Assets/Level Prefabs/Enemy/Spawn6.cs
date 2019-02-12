@@ -25,7 +25,7 @@ public class Spawn6 : MonoBehaviour
 
         if (Count.Equals(1))
         {
-            Debug.Log("TOUCHING");
+            
             if (SpawnPoint1 != null)
             {
                 Chase go = GameObject.Instantiate(Enemy).GetComponent<Chase>();
