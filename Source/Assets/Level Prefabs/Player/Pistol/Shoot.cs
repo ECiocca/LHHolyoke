@@ -6,8 +6,6 @@ public class Shoot : MonoBehaviour {
 
     public GameObject Bullet;
     public GameObject Gunend;
-    public GameObject Devil;
-    public GameObject SpawnPoint;
 
     public float speed = 1.0F;
     public float Xrot = 0F;

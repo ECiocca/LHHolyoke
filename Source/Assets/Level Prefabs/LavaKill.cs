@@ -11,16 +11,11 @@ public class LavaKill : MonoBehaviour {
     {
         Debug.Log("1");
         if (collision.gameObject.tag == "Respawn")
+        {
             Debug.Log("2");
-            respawn();
-    }
-
-    private void respawn()
-    {
-        Debug.Log("3");
-        this.transform.position = DeathScrene.transform.position;
-        GameObject.Destroy(Body.gameObject);
-
+            this.transform.position = DeathScrene.transform.position;
+            GameObject.Destroy(Body.gameObject);
+        }
     }
 	
 	// Update is called once per frame
