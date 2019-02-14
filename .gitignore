@@ -4,7 +4,7 @@ Source/Builds/
 Source/.vs/
 Source/*.csproj
 Source/*.sln
-Source/Packages/manifest\.json
+Source/Packages/*.json
 Source/obj/
 
 *.csproj
