@@ -21,8 +21,10 @@ public class Portal : MonoBehaviour {
         {
             //Chase go = GameObject.Instantiate(Player).GetComponent<Chase>();
             Player.transform.position = Spawnpoint.transform.position;
-        Player.transform.LookAt(Rotation.transform);
-        }
+            //Player.transform.LookAt(Rotation.transform);
+            Player.transform.Rotate(new Vector3(0, 180, 0));
+
+    }
 
  
 	
