@@ -12,10 +12,8 @@ public class LavaKill : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("1");
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("2");
             Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled=false;
             Player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
@@ -23,7 +21,6 @@ public class LavaKill : MonoBehaviour {
             Camera.transform.LookAt(Lookat.transform);
             GameObject.Destroy(HUD.gameObject);
             GameObject.Destroy(Body.gameObject);
-
         }
     }
 	
