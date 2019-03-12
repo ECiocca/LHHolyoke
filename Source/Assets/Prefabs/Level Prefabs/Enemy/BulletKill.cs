@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletKill : MonoBehaviour {
-    public float health;
+    public float health = 5f;
+
+    public float damage = 1f;
 
     // Use this for initialization
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-                GameObject.Destroy(this.gameObject);
+            health -= damage;
+            {
+                if (health <= 0)
+                {
+                    GameObject.Destroy(this.gameObject);
+                }
+            }
         }
-        }
+    }
 
 
     

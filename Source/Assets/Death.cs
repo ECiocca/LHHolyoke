@@ -26,7 +26,7 @@ public class Death : MonoBehaviour{
         
         if (other.gameObject.tag == "Damage")
         {
-            TestDamage TheBullet = other.gameObject.GetComponent<TestDamage>();
+            Bullet TheBullet = other.gameObject.GetComponent<Bullet>();
             Health myHealth = this.gameObject.GetComponent<Health>();
 
 

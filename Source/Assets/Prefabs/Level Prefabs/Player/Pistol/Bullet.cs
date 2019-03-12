@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public float lifespan = 2.0F;
+    public float Damage = 20;
     public AudioClip nuke;
     public AudioSource soundPlayer;
 

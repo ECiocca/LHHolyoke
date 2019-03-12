@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
     public float Width=500f;
+
     public Death A;
 
     // Update is called once per frame

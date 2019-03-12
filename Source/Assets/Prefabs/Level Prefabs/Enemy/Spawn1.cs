@@ -24,9 +24,12 @@ public class Spawn1 : MonoBehaviour
             Chase go = GameObject.Instantiate(Enemy).GetComponent<Chase>();
             go.transform.position = SpawnPoint1.transform.position;
             go.target = Target.transform;
+
+            
             Chase go2 = GameObject.Instantiate(Enemy).GetComponent<Chase>();
             go2.transform.position = SpawnPoint2.transform.position;
             go2.target = Target.transform;
+
             Count += 1;
         }
     }
