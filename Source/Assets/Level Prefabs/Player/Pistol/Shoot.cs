@@ -30,7 +30,14 @@ public class Shoot : MonoBehaviour {
             //go.transform.position = this.transform.position + (transform.up*up);
             //go.GetComponent<Rigidbody>().AddForce(Quaternion.Euler(Xrot,Yrot,Zrot)*this.transform.forward*speed, ForceMode.Impulse);
             go.transform.position = Gunend.transform.position;
-            go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) *speed, ForceMode.Impulse);
+            go.transform.position = Gunend.transform.position;
+            go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) * speed, ForceMode.Impulse);
+
+            Animator Shoot = GetComponent<Animator>();
+            if (Shoot != null)
+            {
+                Shoot.Play("Shoot");
+            }
 
             m_AudioSource.clip = nuke;
             m_AudioSource.Play();
