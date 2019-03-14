@@ -38,6 +38,12 @@ public class Shoot : MonoBehaviour {
                 m_AudioSource.clip = nuke;
                 m_AudioSource.Play();
 
+                Animator anm = GetComponent<Animator>();
+                if (anm != null)
+                {
+                    anm.Play("Shoot");
+                }
+
             }
 
         }
@@ -47,6 +53,13 @@ public class Shoot : MonoBehaviour {
             {
                 if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo()) //If your clip isn't full
                 {
+
+                    Animator anm = GetComponent<Animator>();
+                    if (anm != null)
+                    {
+                        anm.Play("Reload");
+                    }
+
                     x = ThisGun.RealoadingSpeed();
                     r = true;
                 }
