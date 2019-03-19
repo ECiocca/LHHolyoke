@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pistol : Gun {
-
+public class Shotgun : Gun
+{
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         CurrentAmmo = MaxAmmo();
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     public override int Damage()
     {
         return 1;
     }
     public override int MaxAmmo()
     {
-        return 8;
+        return 6;
     }
     public override int FireRate()
     {
