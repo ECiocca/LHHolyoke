@@ -13,6 +13,7 @@ public class Shoot : MonoBehaviour {
     bool r = false;
 
     public AudioClip nuke;
+    public AudioClip Reload;
     public AudioSource m_AudioSource;
 
     public Gun ThisGun;
@@ -62,6 +63,8 @@ public class Shoot : MonoBehaviour {
 
                     x = ThisGun.RealoadingSpeed();
                     r = true;
+                    m_AudioSource.clip = Reload;
+                    m_AudioSource.Play();
                 }
             }
         }

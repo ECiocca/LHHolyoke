@@ -8839,6 +8839,7 @@ MonoBehaviour:
   Gunend: {fileID: 514902015}
   speed: 1
   nuke: {fileID: 8300000, guid: 446cb57b0e6f20044ba6591776e1686a, type: 3}
+  Reload: {fileID: 8300000, guid: 3f9ef440d1fd53242a0884690fa22b38, type: 3}
   m_AudioSource: {fileID: 2111231629}
   ThisGun: {fileID: 1855471579}
 --- !u!95 &1855471578
