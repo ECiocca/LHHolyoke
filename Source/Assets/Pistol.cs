@@ -21,7 +21,7 @@ public class Pistol : Gun {
     }
     public override int MaxAmmo()
     {
-        return 8;
+        return 12;
     }
     public override int FireRate()
     {
@@ -29,7 +29,7 @@ public class Pistol : Gun {
     }
     public override int RealoadingSpeed()
     {
-        return 2;
+        return 4;
         //The higher number the longer it takes to reload
     }
 
