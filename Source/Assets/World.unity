@@ -1936,7 +1936,7 @@ Prefab:
         type: 2}
       propertyPath: HUD
       value: 
-      objectReference: {fileID: 1153840241}
+      objectReference: {fileID: 124562858}
     - target: {fileID: 114682058510290676, guid: e6869837e3c1668488c614940b87ef78,
         type: 2}
       propertyPath: Lookat
