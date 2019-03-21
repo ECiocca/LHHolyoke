@@ -4096,12 +4096,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
   Gunend: {fileID: 1896356293603500}
+  view: {fileID: 0}
   speed: 70
   nuke: {fileID: 0}
-  Reload: {fileID: 0}
   m_AudioSource: {fileID: 6379985377018967361, guid: 6e6e9945f0f5ae945b99bc7b62611dad,
     type: 2}
   ThisGun: {fileID: 114607033092159382}
+  Magnifucation: 0
 --- !u!114 &114539832254482818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4115,11 +4116,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
   Gunend: {fileID: 1443940057322594}
+  view: {fileID: 20649461692118962}
   speed: 1
   nuke: {fileID: 8300000, guid: 446cb57b0e6f20044ba6591776e1686a, type: 3}
-  Reload: {fileID: 8300000, guid: 3f9ef440d1fd53242a0884690fa22b38, type: 3}
   m_AudioSource: {fileID: 82862350041647474}
   ThisGun: {fileID: 114874385463432694}
+  Magnifucation: 0
 --- !u!114 &114607033092159382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4273,6 +4275,7 @@ MonoBehaviour:
   DeathScrene: {fileID: 0}
   HUD: {fileID: 0}
   Lookat: {fileID: 0}
+  Zoom: {fileID: 0}
   CurrentHealth: 100
   HCooldown: -0.0023718476
 --- !u!114 &114874385463432694
