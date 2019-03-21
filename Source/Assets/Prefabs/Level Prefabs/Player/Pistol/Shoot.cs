@@ -57,6 +57,14 @@ public class Shoot : MonoBehaviour {
                     m_AudioSource.clip = nuke;
                     m_AudioSource.Play();
 
+                    Animator anm = GetComponent<Animator>();
+                    if (anm != null)
+                    {
+                        anm.Play("Shoot");
+                    }
+
+
+
                     Firerate = ThisGun.FireRate();
                     
 
@@ -72,6 +80,13 @@ public class Shoot : MonoBehaviour {
                 {
                     x = ThisGun.RealoadingSpeed();
                     r = true;
+
+                    Animator anm = GetComponent<Animator>();
+                    if (anm != null)
+                    {
+                        anm.Play("Reload");
+                    }
+
                 }
             }
         }
@@ -86,6 +101,7 @@ public class Shoot : MonoBehaviour {
             ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
             x = 1;
             r = false;
+
         }
 
         if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(1))
