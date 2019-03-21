@@ -1942,14 +1942,6 @@ Prefab:
       propertyPath: Lookat
       value: 
       objectReference: {fileID: 1477563923}
-    - target: {fileID: 1594969118621758, guid: e6869837e3c1668488c614940b87ef78, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405589844833148, guid: e6869837e3c1668488c614940b87ef78, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6869837e3c1668488c614940b87ef78, type: 2}
   m_IsPrefabAsset: 0

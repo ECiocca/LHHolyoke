@@ -631,7 +631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1409856065574192
 GameObject:
   m_ObjectHideFlags: 1
@@ -2609,14 +2609,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443940057322594}
-  m_LocalRotation: {x: 0.01615368, y: 0.7048162, z: -0.7071783, w: 0.053591684}
-  m_LocalPosition: {x: 1.3058426, y: -2.5425696, z: 28.208372}
-  m_LocalScale: {x: 8.801151, y: 8.801151, z: 8.801147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8, y: -3.3, z: 26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255730191907884}
   m_Father: {fileID: 4201313803814284}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90.00001, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4640488947072132
 Transform:
   m_ObjectHideFlags: 1
@@ -4099,6 +4099,7 @@ MonoBehaviour:
   view: {fileID: 0}
   speed: 70
   nuke: {fileID: 0}
+  Reload: {fileID: 0}
   m_AudioSource: {fileID: 6379985377018967361, guid: 6e6e9945f0f5ae945b99bc7b62611dad,
     type: 2}
   ThisGun: {fileID: 114607033092159382}
@@ -4117,8 +4118,9 @@ MonoBehaviour:
   Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
   Gunend: {fileID: 1443940057322594}
   view: {fileID: 20649461692118962}
-  speed: 1
+  speed: 70
   nuke: {fileID: 8300000, guid: 446cb57b0e6f20044ba6591776e1686a, type: 3}
+  Reload: {fileID: 8300000, guid: 3f9ef440d1fd53242a0884690fa22b38, type: 3}
   m_AudioSource: {fileID: 82862350041647474}
   ThisGun: {fileID: 114874385463432694}
   Magnifucation: 0

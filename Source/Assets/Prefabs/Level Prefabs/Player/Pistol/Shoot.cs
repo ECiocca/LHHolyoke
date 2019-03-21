@@ -14,6 +14,7 @@ public class Shoot : MonoBehaviour {
     bool r = false;
 
     public AudioClip nuke;
+    public AudioClip Reload;
     public AudioSource m_AudioSource;
 
     public Gun ThisGun;
@@ -52,7 +53,7 @@ public class Shoot : MonoBehaviour {
                     GameObject go = GameObject.Instantiate(Bullet);
                     ThisGun.Shoot();
                     go.transform.position = Gunend.transform.position;
-                    go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) * speed, ForceMode.Impulse);
+                    go.GetComponent<Rigidbody>().AddForce(Gunend.transform.forward * speed, ForceMode.Impulse);
 
                     m_AudioSource.clip = nuke;
                     m_AudioSource.Play();
@@ -86,6 +87,10 @@ public class Shoot : MonoBehaviour {
                     {
                         anm.Play("Reload");
                     }
+
+                    m_AudioSource.clip = Reload;
+                    m_AudioSource.Play();
+
 
                 }
             }
