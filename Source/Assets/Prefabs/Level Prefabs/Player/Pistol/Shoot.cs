@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour {
 
     public GameObject Bullet;
     public GameObject Gunend;
+    public Camera view;
 
     public float speed = 1.0F;
     
@@ -13,38 +14,53 @@ public class Shoot : MonoBehaviour {
     bool r = false;
 
     public AudioClip nuke;
-    public AudioClip Reload;
     public AudioSource m_AudioSource;
 
     public Gun ThisGun;
 
+    float Firerate = 0; //Needs to get pulled from gun class
+
+    bool Scoped;
+
+    public float Magnifucation;
 
     // Use this for initialization
     void Start () {
         ThisGun = this.gameObject.GetComponent<Gun>();
-	}
+        
+
+        Scoped = false;
+        //Magnifucation = view.fieldOfView;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        
+
+        if (Firerate > 0) {
+            Firerate -= Time.deltaTime;
+        }
         if (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0))
         {
-            if (ThisGun.CurrentAmmo > 0)
+
+            if (ThisGun.CurrentAmmo > 0) 
             {
-                GameObject go = GameObject.Instantiate(Bullet);
-                ThisGun.Shoot();
-                go.transform.position = Gunend.transform.position;
-                go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) * speed, ForceMode.Impulse);
-
-                m_AudioSource.clip = nuke;
-                m_AudioSource.Play();
-
-                Animator anm = GetComponent<Animator>();
-                if (anm != null)
+                if (Firerate <= 0)
                 {
-                    anm.Play("Shoot");
-                }
+                    
+                    GameObject go = GameObject.Instantiate(Bullet);
+                    ThisGun.Shoot();
+                    go.transform.position = Gunend.transform.position;
+                    go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) * speed, ForceMode.Impulse);
 
+                    m_AudioSource.clip = nuke;
+                    m_AudioSource.Play();
+
+                    Firerate = ThisGun.FireRate();
+                    
+
+                }
             }
 
         }
@@ -54,17 +70,8 @@ public class Shoot : MonoBehaviour {
             {
                 if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo()) //If your clip isn't full
                 {
-
-                    Animator anm = GetComponent<Animator>();
-                    if (anm != null)
-                    {
-                        anm.Play("Reload");
-                    }
-
                     x = ThisGun.RealoadingSpeed();
                     r = true;
-                    m_AudioSource.clip = Reload;
-                    m_AudioSource.Play();
                 }
             }
         }
@@ -79,6 +86,25 @@ public class Shoot : MonoBehaviour {
             ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
             x = 1;
             r = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(1))
+        {
+            Scoped = !Scoped;
+
+            if (Scoped == true)
+            {
+                //Magnifucation = 15;
+                view.fieldOfView = 15;
+                
+            }
+            else
+            {
+                //Magnifucation = 60;
+                view.fieldOfView = 60;
+            }
+
+            
         }
 
     }

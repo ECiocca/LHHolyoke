@@ -10,6 +10,7 @@ public class Death : MonoBehaviour{
     public GameObject DeathScrene;
     public GameObject HUD;
     public GameObject Lookat;
+    public Shoot Zoom;
 
     public float CurrentHealth = 100f;
     public float HCooldown;
@@ -44,8 +45,10 @@ public class Death : MonoBehaviour{
                 Player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 Camera.transform.position = DeathScrene.transform.position;
                 Camera.transform.LookAt(Lookat.transform);
+                Zoom.Magnifucation = 15;
                 GameObject.Destroy(HUD.gameObject);
                 GameObject.Destroy(Body.gameObject);
+
 
             }
         }       

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletKill : MonoBehaviour {
+public class BulletKills : MonoBehaviour {
     public float health = 5f;
 
     public float damage = 1f;
