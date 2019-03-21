@@ -75,7 +75,7 @@ public class Shoot : MonoBehaviour {
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.R)) //If you press R
+            if (Input.GetKeyDown(KeyCode.R)&&(!r)) //If you press R
             {
                 if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo()) //If your clip isn't full
                 {
