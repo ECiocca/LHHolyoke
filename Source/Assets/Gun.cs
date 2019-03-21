@@ -28,7 +28,7 @@ public class Gun : MonoBehaviour {
     }
     public virtual int FireRate()
     {
-        return 1;
+        return 20;
     }
     public virtual int RealoadingSpeed()
     {

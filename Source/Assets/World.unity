@@ -4241,9 +4241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc7e4667b97b3841b6c1aa79c792e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xspeed: 2
-  yspeed: 2
-  zspeed: 2
+  xspeed: 50
+  yspeed: 50
+  zspeed: 50
   Spawnpoint: {fileID: 149288083}
   Player: {fileID: 1983624704}
   Rotation: {fileID: 1571315272}
@@ -11686,7 +11686,7 @@ MonoBehaviour:
   HUD: {fileID: 124562858}
   Lookat: {fileID: 1477563923}
   Zoom: {fileID: 1202994348}
-  CurrentHealth: 100
+  CurrentHealth: 10000
   HCooldown: -0.0023718476
 --- !u!82 &1983624708
 AudioSource:

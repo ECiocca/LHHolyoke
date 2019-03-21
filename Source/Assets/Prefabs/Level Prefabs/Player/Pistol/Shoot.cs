@@ -18,14 +18,14 @@ public class Shoot : MonoBehaviour {
 
     public Gun ThisGun;
 
-    float Firerate = 0; //Needs to get pulled from gun class
+    float Firerate = 0;
 
     bool Scoped;
 
     public float Magnifucation;
 
-    // Use this for initialization
     void Start () {
+    // Use this for initialization
         ThisGun = this.gameObject.GetComponent<Gun>();
         
 
@@ -37,15 +37,16 @@ public class Shoot : MonoBehaviour {
     void Update()
     {
         
-
-        if (Firerate > 0) {
-            Firerate -= Time.deltaTime;
-        }
         if (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0))
         {
+            
+            if (Firerate > 0) {
+                Firerate -= Time.deltaTime;
+                    }
 
             if (ThisGun.CurrentAmmo > 0) 
             {
+                Debug.Log(Firerate);
                 if (Firerate <= 0)
                 {
                     
@@ -59,19 +60,19 @@ public class Shoot : MonoBehaviour {
 
                     Firerate = ThisGun.FireRate();
                     
-
                 }
             }
 
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.R)) //If you press R
+            if (Input.GetKeyDown(KeyCode.R) && !r) //If you press R
             {
+
                 if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo()) //If your clip isn't full
                 {
                     x = ThisGun.RealoadingSpeed();
-                    r = true;
+                    r = !r;
                 }
             }
         }
@@ -86,6 +87,7 @@ public class Shoot : MonoBehaviour {
             ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
             x = 1;
             r = false;
+           ;
         }
 
         if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(1))
@@ -101,6 +103,7 @@ public class Shoot : MonoBehaviour {
             else
             {
                 //Magnifucation = 60;
+                view.fieldOfView = 60;
                 view.fieldOfView = 60;
             }
 
