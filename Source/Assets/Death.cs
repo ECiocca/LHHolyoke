@@ -46,7 +46,10 @@ public class Death : MonoBehaviour{
                 Camera.transform.position = DeathScrene.transform.position;
                 Camera.transform.LookAt(Lookat.transform);
                 Zoom.Magnifucation = 15;
-                GameObject.Destroy(HUD.gameObject);
+                if (HUD != null)
+                {
+                    HUD.gameObject.SetActive(false);
+                }
                 GameObject.Destroy(Body.gameObject);
 
 

@@ -4277,7 +4277,7 @@ MonoBehaviour:
   DeathScrene: {fileID: 0}
   HUD: {fileID: 0}
   Lookat: {fileID: 0}
-  Zoom: {fileID: 0}
+  Zoom: {fileID: 114539832254482818}
   CurrentHealth: 100
   HCooldown: -0.0023718476
 --- !u!114 &114874385463432694

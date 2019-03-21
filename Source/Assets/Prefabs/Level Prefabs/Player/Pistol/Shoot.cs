@@ -11,7 +11,7 @@ public class Shoot : MonoBehaviour {
     public float speed = 1.0F;
     
     float x = 1;
-    bool r = false;
+    bool is_reloading = false;
 
     public AudioClip nuke;
     public AudioClip Reload;
@@ -44,8 +44,8 @@ public class Shoot : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0))
         {
-
-            if (ThisGun.CurrentAmmo > 0) 
+            //don't do it if you are reloading
+            if ((ThisGun.CurrentAmmo > 0)&&(!is_reloading))
             {
                 if (Firerate <= 0)
                 {
@@ -75,12 +75,12 @@ public class Shoot : MonoBehaviour {
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.R)&&(!r)) //If you press R
+            if (Input.GetKeyDown(KeyCode.R)&&(!is_reloading)) //If you press R
             {
                 if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo()) //If your clip isn't full
                 {
                     x = ThisGun.RealoadingSpeed();
-                    r = true;
+                    is_reloading = true;
 
                     Animator anm = GetComponent<Animator>();
                     if (anm != null)
@@ -95,19 +95,21 @@ public class Shoot : MonoBehaviour {
                 }
             }
         }
-        if (r) //If you aren't already reloading AND does counter for how long the reload is
+        if (is_reloading) //If you aren't already reloading AND does counter for how long the reload is
         {
             x -= Time.deltaTime;
             Debug.Log(x);
-        }
-        if (x <= 0)
-        {
-            //Change so theres an if statement here checking if you have the ammo
-            ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
-            x = 1;
-            r = false;
 
+            if (x <= 0)
+            {
+                //Change so theres an if statement here checking if you have the ammo
+                ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
+                x = 1;
+                is_reloading = false;
+
+            }
         }
+
 
         if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(1))
         {
