@@ -1646,7 +1646,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1266392359121124}
   serializedVersion: 2
-  m_Mass: 8
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1693,6 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719de35978b9bcc4fae0b0318b2b3de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   armspeed: 100
   Snowball: {fileID: 1726032059562592, guid: 3ff55a9819a05ec41a720c2bd14961ef, type: 2}
   Spawnpoint: {fileID: 1462635527752290}
@@ -1700,7 +1701,6 @@ MonoBehaviour:
   horizantal: 10
   vertical: 0
   speed: 1
-  target: {fileID: 0}
 --- !u!135 &135070140846749422
 SphereCollider:
   m_ObjectHideFlags: 1

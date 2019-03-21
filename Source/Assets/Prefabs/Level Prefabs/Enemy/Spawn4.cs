@@ -10,7 +10,8 @@ public class Spawn4 : MonoBehaviour
     public GameObject SpawnPoint3;
     public GameObject SpawnPoint4;
     public GameObject Target;
-    public float Count;
+
+    float Count;
 
     private void OnTriggerEnter(Collider other)
     {
