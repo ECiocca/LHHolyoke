@@ -40,7 +40,7 @@ public class Shoot2 : MonoBehaviour
                 GameObject go = GameObject.Instantiate(Bullet);
                 ThisGun.Shoot();
                 go.transform.position = Gunend.transform.position;
-                go.GetComponent<Rigidbody>().AddForce(Vector3.Cross(this.transform.up, this.transform.forward) * speed, ForceMode.Impulse);
+                go.GetComponent<Rigidbody>().AddForce(Gunend.transform.forward * speed, ForceMode.Impulse);
                 nextFire = Time.time + fireRate;
            
                 m_AudioSource.clip = loop;

@@ -9,15 +9,23 @@ public class Targetting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        target = Player.target;
+        //target = Player.target;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 v3dif = target.transform.position - this.transform.position;
 
-        v3dif.Normalize();
-        GetComponent<Rigidbody>().AddForce(v3dif * movement);
+        if ((target == null)&&(Player!=null))
+        {
+            target = Player.target;
+        }
 
+        if (target!=null)
+        {
+            Vector3 v3dif = target.transform.position - this.transform.position;
+
+            v3dif.Normalize();
+            GetComponent<Rigidbody>().AddForce(v3dif * movement);
+        }
     }
 }

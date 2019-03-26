@@ -9,20 +9,29 @@ public class Chase : MonoBehaviour {
     public float distance;
     // Use this for initialization
     void Start () {
-		
-	}
+       
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        
 
-        distance = (this.transform.position - target.position).magnitude;
 
-        if (distance <= huntdistance)
+        //if we don't have any target set, try to get one
+        if (target == null)
         {
-            transform.LookAt(target);
-            transform.localPosition += transform.forward * Time.deltaTime * speed;
+            target = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.Instance.gameObject.transform;
         }
 
+        //only chase if we have a target
+        if (target != null)
+        {
+            distance = (this.transform.position - target.position).magnitude;
+
+            if (distance <= huntdistance)
+            {
+                transform.LookAt(target);
+                transform.localPosition += transform.forward * Time.deltaTime * speed;
+            }
+        }
     }
 }
