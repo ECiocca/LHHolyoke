@@ -23,9 +23,9 @@ public class Pistol : Gun {
     {
         return 8;
     }
-    public override int FireRate()
+    public override float FireRate()
     {
-        return 1;
+        return 0.2f;
     }
     public override int RealoadingSpeed()
     {

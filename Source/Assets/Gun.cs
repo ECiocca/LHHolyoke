@@ -26,7 +26,7 @@ public class Gun : MonoBehaviour {
     {
         return 0;
     }
-    public virtual int FireRate()
+    public virtual float FireRate()
     {
         return 1;
     }
