@@ -43,9 +43,19 @@ public class WeaponSwitcher : MonoBehaviour {
             weaponnumber = 0;
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            weaponnumber = 2;
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             weaponnumber = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            weaponnumber = 3;
         }
 
         if (lastselected != weaponnumber)
