@@ -7,6 +7,14 @@ TagManager:
   - Devil
   - Bullet
   - Damage
+  - Ememy
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - Terrain
   layers:
   - Default
   - TransparentFX

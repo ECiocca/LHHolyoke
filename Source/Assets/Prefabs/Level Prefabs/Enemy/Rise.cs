@@ -8,7 +8,7 @@ public class Rise : MonoBehaviour {
     public float distance;
     public float Risespeed;
     public float Maxy;
-    public float Rose;
+    float Rose;
     // Use this for initialization
     void Start () {
         Chase script = GetComponent<Chase>();
@@ -25,7 +25,7 @@ public class Rise : MonoBehaviour {
             if (Rose == 0)
             {
                 {
-                    this.transform.position += new Vector3(0, Risespeed, 0);
+                    this.transform.position += new Vector3(0, Risespeed, 0) * Time.deltaTime;
                     if (this.transform.position.y >= Maxy)
                         Rose = 1;
                 }

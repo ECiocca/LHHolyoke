@@ -17,9 +17,15 @@ public class Shoot : MonoBehaviour {
     public AudioClip Reload;
     public AudioSource m_AudioSource;
 
+    int layermask = 0;
+
     public Gun ThisGun;
 
-    float Firerate = 0; //Needs to get pulled from gun class
+    private RaycastHit hit;
+    private RaycastCommand Object;
+
+    float Firerate = -100; //Needs to get pulled from gun class
+    float Range = 100000; //Needs to get pulled from gun class
 
     bool Scoped;
 
@@ -39,7 +45,7 @@ public class Shoot : MonoBehaviour {
     {
         
 
-        if (Firerate > 0) {
+        if (Firerate >= 0) {
             Firerate -= Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0))
@@ -50,25 +56,34 @@ public class Shoot : MonoBehaviour {
                 if (Firerate <= 0)
                 {
                     
-                    GameObject go = GameObject.Instantiate(Bullet);
+                    //GameObject go = GameObject.Instantiate(Bullet);
                     ThisGun.Shoot();
-                    go.transform.position = Gunend.transform.position;
-                    go.GetComponent<Rigidbody>().AddForce(Gunend.transform.forward * speed, ForceMode.Impulse);
+                    //go.transform.position = Gunend.transform.position;
+                    //go.GetComponent<Rigidbody>().AddForce(Gunend.transform.forward * speed, ForceMode.Impulse);
+                   
+                    if (Physics.Raycast(Gunend.transform.position, transform.TransformDirection(Vector3.forward), out hit, Range)) //&& (hit.collider.tag == "Enemy"))
+                    {
+                        //BulletKills bk = Object.position.gameObject.GetComponent<BulletKills>();
+                        BulletKills bk = hit.transform.gameObject.GetComponent<BulletKills>();
 
-                    m_AudioSource.clip = nuke;
+                        if (bk != null)
+                        {                           
+                            bk.TakeDamage();
+                        }
+
+                    }
+
+                    m_AudioSource.clip = nuke; 
                     m_AudioSource.Play();
+
 
                     Animator anm = GetComponent<Animator>();
                     if (anm != null)
                     {
                         anm.Play("Shoot");
                     }
-
-
-
-                    Firerate = ThisGun.FireRate();
-                    
-
+                    //Firerate = ThisGun.FireRate();
+                    Firerate = 0.5f;
                 }
             }
 
@@ -98,7 +113,6 @@ public class Shoot : MonoBehaviour {
         if (is_reloading) //If you aren't already reloading AND does counter for how long the reload is
         {
             x -= Time.deltaTime;
-            Debug.Log(x);
 
             if (x <= 0)
             {
