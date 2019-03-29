@@ -138,7 +138,7 @@ public class Shoot : MonoBehaviour {
             else
             {
                 //Magnifucation = 60;
-                view.fieldOfView = 60;
+                view.fieldOfView = 40;
             }
 
             
