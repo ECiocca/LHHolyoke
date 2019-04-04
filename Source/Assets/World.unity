@@ -1986,11 +1986,15 @@ MonoBehaviour:
   Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
   Gunend: {fileID: 1946794437}
   view: {fileID: 1585880803}
-  bulletnumber: 9
+  numberofbullets: 9
   speed: 70
+  spreadx: 6
+  spready: 6
   nuke: {fileID: 8300000, guid: 6cfe78a1808339a47a36cf3df01f1d7d, type: 3}
   Reload: {fileID: 8300000, guid: 533c57f91c7ae9c458a74e0298a43353, type: 3}
   m_AudioSource: {fileID: 2023540533}
+  ReloadRepeat: {fileID: 8300000, guid: 227b56f91415f11488765779b3a761c9, type: 3}
+  ReloadFinish: {fileID: 8300000, guid: 533c57f91c7ae9c458a74e0298a43353, type: 3}
   ThisGun: {fileID: 158674381}
   Magnifucation: 0
 --- !u!1 &160850027
@@ -8464,6 +8468,10 @@ Prefab:
       propertyPath: nuke
       value: 
       objectReference: {fileID: 8300000, guid: 42578b27c040ca5409eddd94a2094da9, type: 3}
+    - target: {fileID: 1447690981117320, guid: e6869837e3c1668488c614940b87ef78, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6869837e3c1668488c614940b87ef78, type: 2}
   m_IsPrefabAsset: 0

@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 46aaa3218e54c4e4e88672246bb4ef18
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: broke's css
+    100002: Camera
+    100004: camera-center-point
+    100006: camera_controller
+    100008: camera_controller_end
+    100010: camera_target
+    100012: camera_target 1
+    100014: camera_target_end
+    100016: Crowbar
+    100018: //RootNode
+    100020: Crowbar_end
+    100022: Hammer
+    100024: Hammer_end
+    100026: Hands
+    100028: l_armtwist_1
+    100030: l_armtwist_2
+    100032: l_armtwist_2_end
+    100034: l_armtwist_3
+    100036: l_armtwist_3_end
+    100038: l_armtwist_4
+    100040: l_forearm
+    100042: l_IK
+    100044: l_IK_end
+    100046: l_index_low
+    100048: l_index_mid
+    100050: l_index_tip
+    100052: l_index_tip_end
+    100054: l_middle_low
+    100056: l_middle_mid
+    100058: l_middle_tip
+    100060: l_middle_tip_end
+    100062: l_pinky_low
+    100064: l_pinky_mid
+    100066: l_pinky_tip
+    100068: l_pinky_tip_end
+    100070: l_pole
+    100072: l_pole_end
+    100074: l_ring_low
+    100076: l_ring_mid
+    100078: l_ring_tip
+    100080: l_ring_tip_end
+    100082: l_thumb_low
+    100084: l_thumb_mid
+    100086: l_thumb_tip
+    100088: l_thumb_tip_end
+    100090: l_upperarm
+    100092: l_wrist
+    100094: Magazine
+    100096: Magazine_end
+    100098: non-ts css
+    100100: r_armtwist_1
+    100102: r_armtwist_2
+    100104: r_armtwist_2_end
+    100106: r_armtwist_3
+    100108: r_armtwist_3_end
+    100110: r_armtwist_4
+    100112: r_armtwist_4_end
+    100114: r_forearm
+    100116: r_IK
+    100118: r_IK_end
+    100120: r_index_low
+    100122: r_index_mid
+    100124: r_index_tip
+    100126: r_index_tip_end
+    100128: r_middle_low
+    100130: r_middle_mid
+    100132: r_middle_tip
+    100134: r_middle_tip_end
+    100136: r_pinky_low
+    100138: r_pinky_mid
+    100140: r_pinky_tip
+    100142: r_pinky_tip_end
+    100144: r_pole
+    100146: r_pole_end
+    100148: r_ring_low
+    100150: r_ring_mid
+    100152: r_ring_tip
+    100154: r_ring_tip_end
+    100156: r_thumb_low
+    100158: r_thumb_mid
+    100160: r_thumb_tip
+    100162: r_thumb_tip_end
+    100164: r_upperarm
+    100166: r_wrist
+    100168: root
+    100170: Slide
+    100172: Slide_end
+    100174: Sun.000
+    100176: Sun.001
+    100178: Sun.003
+    100180: v_crowbar
+    100182: watch
+    100184: watch_end
+    400000: broke's css
+    400002: Camera
+    400004: camera-center-point
+    400006: camera_controller
+    400008: camera_controller_end
+    400010: camera_target
+    400012: camera_target 1
+    400014: camera_target_end
+    400016: Crowbar
+    400018: //RootNode
+    400020: Crowbar_end
+    400022: Hammer
+    400024: Hammer_end
+    400026: Hands
+    400028: l_armtwist_1
+    400030: l_armtwist_2
+    400032: l_armtwist_2_end
+    400034: l_armtwist_3
+    400036: l_armtwist_3_end
+    400038: l_armtwist_4
+    400040: l_forearm
+    400042: l_IK
+    400044: l_IK_end
+    400046: l_index_low
+    400048: l_index_mid
+    400050: l_index_tip
+    400052: l_index_tip_end
+    400054: l_middle_low
+    400056: l_middle_mid
+    400058: l_middle_tip
+    400060: l_middle_tip_end
+    400062: l_pinky_low
+    400064: l_pinky_mid
+    400066: l_pinky_tip
+    400068: l_pinky_tip_end
+    400070: l_pole
+    400072: l_pole_end
+    400074: l_ring_low
+    400076: l_ring_mid
+    400078: l_ring_tip
+    400080: l_ring_tip_end
+    400082: l_thumb_low
+    400084: l_thumb_mid
+    400086: l_thumb_tip
+    400088: l_thumb_tip_end
+    400090: l_upperarm
+    400092: l_wrist
+    400094: Magazine
+    400096: Magazine_end
+    400098: non-ts css
+    400100: r_armtwist_1
+    400102: r_armtwist_2
+    400104: r_armtwist_2_end
+    400106: r_armtwist_3
+    400108: r_armtwist_3_end
+    400110: r_armtwist_4
+    400112: r_armtwist_4_end
+    400114: r_forearm
+    400116: r_IK
+    400118: r_IK_end
+    400120: r_index_low
+    400122: r_index_mid
+    400124: r_index_tip
+    400126: r_index_tip_end
+    400128: r_middle_low
+    400130: r_middle_mid
+    400132: r_middle_tip
+    400134: r_middle_tip_end
+    400136: r_pinky_low
+    400138: r_pinky_mid
+    400140: r_pinky_tip
+    400142: r_pinky_tip_end
+    400144: r_pole
+    400146: r_pole_end
+    400148: r_ring_low
+    400150: r_ring_mid
+    400152: r_ring_tip
+    400154: r_ring_tip_end
+    400156: r_thumb_low
+    400158: r_thumb_mid
+    400160: r_thumb_tip
+    400162: r_thumb_tip_end
+    400164: r_upperarm
+    400166: r_wrist
+    400168: root
+    400170: Slide
+    400172: Slide_end
+    400174: Sun.000
+    400176: Sun.001
+    400178: Sun.003
+    400180: v_crowbar
+    400182: watch
+    400184: watch_end
+    2000000: Camera
+    2100000: shadeless
+    2100002: Material
+    2100004: t_phoenix
+    2100006: v_hands
+    2300000: camera-center-point
+    2300002: camera_target
+    2300004: v_crowbar
+    3300000: camera-center-point
+    3300002: camera_target
+    3300004: v_crowbar
+    4300000: camera-center-point
+    4300002: camera_target
+    4300004: v_crowbar
+    4300006: broke's css
+    4300008: non-ts css
+    7400000: Hands|fire
+    7400002: Hands|fire2
+    7400004: Hands|fire3
+    7400006: Hands|fire4
+    7400008: Hands|idle
+    7400010: Hands|origin
+    7400012: Hands|reload
+    7400014: Hands|select
+    7400016: Hands|v_crowbarAction
+    7400018: v_crowbar|fire3
+    7400020: v_crowbar|v_crowbarAction
+    7400022: Sun.000|v_crowbarAction
+    7400024: Sun.001|v_crowbarAction
+    7400026: Sun.003|v_crowbarAction
+    9500000: //RootNode
+    10800000: Sun.000
+    10800002: Sun.001
+    10800004: Sun.003
+    13700000: broke's css
+    13700002: non-ts css
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

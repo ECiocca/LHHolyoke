@@ -8,9 +8,11 @@ public class Shoot3 : MonoBehaviour
     public GameObject Bullet;
     public GameObject Gunend;
     public Camera view;
-    public float bulletnumber = 9.0F;
 
+    public float numberofbullets = 9.0F;
     public float speed = 1.0F;
+    public float spreadx = 1.0F;
+    public float spready = 1.0F;
 
     float x = 1;
     bool is_reloading = false;
@@ -18,6 +20,8 @@ public class Shoot3 : MonoBehaviour
     public AudioClip nuke;
     public AudioClip Reload;
     public AudioSource m_AudioSource;
+    public AudioClip ReloadRepeat;
+    public AudioClip ReloadFinish;
 
     public Gun ThisGun;
 
@@ -51,10 +55,11 @@ public class Shoot3 : MonoBehaviour
             //don't do it if you are reloading
             if ((ThisGun.CurrentAmmo > 0) && (!is_reloading))
             {
-                if (Firerate <= 0)
+                if (Firerate <= 0) 
                 {
 
                     GameObject go = GameObject.Instantiate(Bullet);
+
                     ThisGun.Shoot();
                     go.transform.position = Gunend.transform.position;
                     go.GetComponent<Rigidbody>().AddForce(Gunend.transform.forward * speed, ForceMode.Impulse);
@@ -90,7 +95,11 @@ public class Shoot3 : MonoBehaviour
                     if (anm != null)
                     {
                         anm.Play("Reload");
+                        anm.Play("ReloadRepeat");
+                        anm.Play("ReloadEnd");
                     }
+
+         
 
                     m_AudioSource.clip = Reload;
                     m_AudioSource.Play();
