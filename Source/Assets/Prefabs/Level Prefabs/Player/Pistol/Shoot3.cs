@@ -95,8 +95,6 @@ public class Shoot3 : MonoBehaviour
                     if (anm != null)
                     {
                         anm.Play("Reload");
-                        anm.Play("ReloadRepeat");
-                        anm.Play("ReloadEnd");
                     }
 
          
@@ -116,9 +114,27 @@ public class Shoot3 : MonoBehaviour
             if (x <= 0)
             {
                 //Change so theres an if statement here checking if you have the ammo
-                ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
-                x = 1;
-                is_reloading = false;
+                if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo())
+                {
+                    Animator anm = GetComponent<Animator>();
+                    if (anm != null)
+                    {
+                        anm.Play("ReloadRepeat");
+                        m_AudioSource.clip = ReloadRepeat;
+                        m_AudioSource.Play();
+                    }
+                    ThisGun.CurrentAmmo += 1;
+
+                }
+                else if (ThisGun.CurrentAmmo == ThisGun.MaxAmmo()) 
+                {
+                    x = 1;
+                    is_reloading = false;
+
+                }
+            
+            
+
 
             }
         }
