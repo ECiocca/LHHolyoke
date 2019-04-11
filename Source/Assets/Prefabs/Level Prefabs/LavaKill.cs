@@ -14,13 +14,11 @@ public class LavaKill : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled=false;
-            Player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            Player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            Camera.transform.position = DeathScrene.transform.position;
-            Camera.transform.LookAt(Lookat.transform);
-            GameObject.Destroy(HUD.gameObject);
-            GameObject.Destroy(Body.gameObject);
+            Death de = collision.gameObject.GetComponentInParent<Death>();
+            if (de!=null)
+            {
+                de.KillPlayer();
+            }
         }
     }
 	

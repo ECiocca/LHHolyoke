@@ -59,7 +59,13 @@ public class Death : MonoBehaviour{
         }
     }
 
-   
+    public void KillPlayer()
+    {
+        CurrentHealth = 0;
+        HCooldown = 10;
+    }
+
+
 
     private void OnCollisionEnter(Collision other)
     {
