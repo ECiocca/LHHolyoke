@@ -35,6 +35,7 @@ public class Spawn6 : MonoBehaviour
             }
             if (SpawnPoint2 != null)
             {
+                Debug.Log("2");
                 Chase go2 = GameObject.Instantiate(Enemy).GetComponent<Chase>();
                 go2.transform.localPosition = Vector3.zero;
                 go2.transform.position = SpawnPoint2.transform.position;
@@ -42,6 +43,7 @@ public class Spawn6 : MonoBehaviour
             }
             if (SpawnPoint3 != null)
             {
+                Debug.Log("3");
                 Chase go3 = GameObject.Instantiate(Enemy).GetComponent<Chase>();
                 go3.transform.localPosition = Vector3.zero;
                 go3.transform.position = SpawnPoint3.transform.position;

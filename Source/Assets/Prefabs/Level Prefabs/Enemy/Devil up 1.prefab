@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114503996492284576}
   m_Layer: 0
   m_Name: Devil up 1
-  m_TagString: Untagged
+  m_TagString: Ememy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,11 +543,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16591aabd0c9bcf48835f9060cba4700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4265882780277392, guid: 87dcb9ab94b574b2998d7bfc4d1dc8d3, type: 2}
+  target: {fileID: 4057741457913456, guid: 7e05a5c707584b74f8b28c95335dbc73, type: 2}
   speed: 1
   distance: 0
   Risespeed: 4
-  Maxy: 25
+  Maxy: 28
 --- !u!114 &114671039276951344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -560,8 +560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMarker: {fileID: 8300000, guid: ecfd49c62985afb4089ddbc77e4b21a2, type: 3}
-  a_AudioSource: {fileID: 0}
-  Player: {fileID: 0}
+  a_AudioSource: {fileID: 82819911808670428, guid: 7e05a5c707584b74f8b28c95335dbc73,
+    type: 2}
+  Player: {fileID: 4057741457913456, guid: 7e05a5c707584b74f8b28c95335dbc73, type: 2}
   health: 1
   damage: 1
 --- !u!114 &114678606116131660

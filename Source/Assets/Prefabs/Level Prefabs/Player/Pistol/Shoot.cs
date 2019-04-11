@@ -132,13 +132,13 @@ public class Shoot : MonoBehaviour {
             if (Scoped == true)
             {
                 //Magnifucation = 15;
-                view.fieldOfView = 15;
+                view.fieldOfView = 35;
                 
             }
             else
             {
                 //Magnifucation = 60;
-                view.fieldOfView = 40;
+                view.fieldOfView = 60;
             }
 
             

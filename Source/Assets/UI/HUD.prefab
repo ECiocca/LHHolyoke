@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 224234466968714004}
   - component: {fileID: 222078389061115806}
   - component: {fileID: 114405452496677378}
-  - component: {fileID: 114480143665950368}
+  - component: {fileID: 114846285996059218}
   m_Layer: 5
   m_Name: Bar(G)
   m_TagString: Untagged
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 224962908227019500}
   - component: {fileID: 222450301253092192}
   - component: {fileID: 114953871993747264}
-  - component: {fileID: 114651504052654678}
+  - component: {fileID: 114525660303593278}
   m_Layer: 5
   m_Name: Pistol
   m_TagString: Untagged
@@ -314,20 +314,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114480143665950368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1167250190405820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccfa5c643291a8a46b0067bc2622f428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Width: 500
-  A: {fileID: 0}
---- !u!114 &114651504052654678
+--- !u!114 &114525660303593278
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,6 +360,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: HEALTH
+--- !u!114 &114846285996059218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167250190405820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfa5c643291a8a46b0067bc2622f428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 500
+  A: {fileID: 0}
 --- !u!114 &114953871993747264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 12
 --- !u!222 &222078389061115806
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -502,7 +502,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 110.2}
-  m_SizeDelta: {x: 500, y: 108}
+  m_SizeDelta: {x: 500, y: 15}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224329861862313674
 RectTransform:

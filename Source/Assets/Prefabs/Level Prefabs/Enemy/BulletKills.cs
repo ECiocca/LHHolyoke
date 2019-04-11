@@ -16,7 +16,10 @@ public class BulletKills : MonoBehaviour {
 
     private void Start()
     {
-       a_AudioSource = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.Instance.gameObject.transform.Find("NewObject").GetComponent<AudioSource>();
+        
+        a_AudioSource = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.Instance.gameObject.transform.Find("Body").gameObject.GetComponent<AudioSource>();
+        Debug.Log(UnityStandardAssets.Characters.FirstPerson.FirstPersonController.Instance.gameObject.transform.Find("Body"));
+        
     }
     public void TakeDamage()
     {
@@ -38,9 +41,6 @@ public class BulletKills : MonoBehaviour {
         if (collision.gameObject.tag == "Bullet")
         {
             TakeDamage();
-        }
-        else
-        {
         }
     }
 
