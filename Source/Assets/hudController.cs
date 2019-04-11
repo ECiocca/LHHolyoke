@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class hudController : MonoBehaviour {
     public Text AmmoNum;
-    public Shoot ThisAmmo;
+    public WeaponSwitcher weapons;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,10 @@ public class hudController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        AmmoNum.text = ThisAmmo.ThisGun.CurrentAmmo.ToString();
+        if (weapons.CurrentGun != null)
+        {
+            AmmoNum.text = weapons.CurrentGun.CurrentAmmo.ToString();
+        }
 		
 	}
 }

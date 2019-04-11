@@ -6,12 +6,11 @@ public class Death : MonoBehaviour
 {
 
     public GameObject Player;
-    public GameObject Camera;
+    public Camera _camera;
     public GameObject Body;
-    public GameObject DeathScrene;
     public GameObject HUD;
     public GameObject Lookat;
-    public Shoot Zoom;
+    public WeaponSwitcher weapons;
 
     public GameObject deathUI;
 
@@ -42,7 +41,6 @@ public class Death : MonoBehaviour
             Player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             //Camera.transform.position = DeathScrene.transform.position;
             //Camera.transform.LookAt(Lookat.transform);
-            Zoom.Magnifucation = 15;
             //if (HUD != null)
             //{
             //    HUD.gameObject.SetActive(false);
@@ -58,6 +56,37 @@ public class Death : MonoBehaviour
 
 
         }
+
+
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(1))
+        {
+            if (weapons.CurrentGun != null)
+            {
+                if (weapons.CurrentGun.CanScope())
+                {
+                    weapons.CurrentGun.DoScope(!weapons.CurrentGun.IsScoped());
+                }
+
+            }
+
+        }
+
+        //poll the current gun. Are we scoped?
+        if (weapons.CurrentGun != null)
+        {
+            bool isScoped = weapons.CurrentGun.IsScoped();
+            //adjust view based on scope
+            if (isScoped == true)
+            {
+                _camera.fieldOfView = 15;
+            }
+            else
+            {
+                _camera.fieldOfView = 60;
+            }
+        }
+
+
     }
 
     public void KillPlayer()

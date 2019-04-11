@@ -35,5 +35,22 @@ public class Rifle1 : Gun
         //The higher number the longer it takes to reload
     }
 
+    bool isScoped = false;
+
+    public override bool CanScope()
+    {
+        return true;
+    }
+
+    public override bool IsScoped()
+    {
+        return isScoped;
+    }
+
+    public override void DoScope(bool bDoScope)
+    {
+        isScoped = bDoScope;
+    }
+
 }
 

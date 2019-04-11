@@ -10,8 +10,22 @@ public class Gun : MonoBehaviour {
 
 
 
-	// Use this for initialization
-	void Start () {
+    public virtual bool CanScope()
+    {
+        return false;
+    }
+
+    public virtual bool IsScoped()
+    {
+        return false;
+    }
+
+    public virtual void DoScope(bool bDoScope)
+    {
+    }
+
+    // Use this for initialization
+    void Start () {
 	}
 	
 	// Update is called once per frame

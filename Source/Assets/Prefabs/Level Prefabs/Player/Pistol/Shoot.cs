@@ -6,7 +6,6 @@ public class Shoot : MonoBehaviour {
 
     public GameObject Bullet;
     public GameObject Gunend;
-    public Camera view;
 
     public float speed = 1.0F;
     
@@ -21,16 +20,12 @@ public class Shoot : MonoBehaviour {
 
     float Firerate = 0; //Needs to get pulled from gun class
 
-    bool Scoped;
-
-    public float Magnifucation;
+   
 
     // Use this for initialization
     void Start () {
         ThisGun = this.gameObject.GetComponent<Gun>();
         
-
-        Scoped = false;
         //Magnifucation = view.fieldOfView;
     }
 
@@ -111,24 +106,7 @@ public class Shoot : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(1))
-        {
-            Scoped = !Scoped;
 
-            if (Scoped == true)
-            {
-                //Magnifucation = 15;
-                view.fieldOfView = 15;
-                
-            }
-            else
-            {
-                //Magnifucation = 60;
-                view.fieldOfView = 60;
-            }
-
-            
-        }
 
     }
     

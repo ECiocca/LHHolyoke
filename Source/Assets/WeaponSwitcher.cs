@@ -7,6 +7,8 @@ public class WeaponSwitcher : MonoBehaviour {
     public int weaponnumber = 0;
 
     public Gun[] Weapons;
+
+    public Gun CurrentGun = null;
        
 	// Use this for initialization
 	void Start () {
@@ -75,9 +77,13 @@ public class WeaponSwitcher : MonoBehaviour {
         int i = 0;
         foreach (Gun gun in Weapons )
         {
+            //on every switch, reset all the scopes
+            gun.DoScope(false);
             if (i == weaponnumber)
+            {
                 gun.gameObject.SetActive(true);
-
+                CurrentGun = gun;
+            }
             else
                 gun.gameObject.SetActive(false);
 
@@ -86,6 +92,7 @@ public class WeaponSwitcher : MonoBehaviour {
 
 
         }
+
     }
 
 }
