@@ -19,6 +19,10 @@ public class Rise : MonoBehaviour {
 	// Update is called once per fram
 	void Update () {
 
+        if (target==null)
+        {
+            target = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.Instance.gameObject.transform;
+        }
 
 
         if (this.transform.position.y <= Maxy)
@@ -30,7 +34,7 @@ public class Rise : MonoBehaviour {
                         Rose = 1;
                 }
             }
-        distance = (this.transform.position - target.position).magnitude;
+            distance = (this.transform.position - target.position).magnitude;
         
             if (Rose == 1)
             {

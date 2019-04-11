@@ -40,9 +40,11 @@ GameObject:
   - component: {fileID: 114671039276951344}
   - component: {fileID: 54631830081463526}
   - component: {fileID: 114678606116131660}
+  - component: {fileID: 114821359759995314}
+  - component: {fileID: 114503996492284576}
   m_Layer: 0
   m_Name: Devil up 1
-  m_TagString: Untagged
+  m_TagString: Ememy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +80,21 @@ GameObject:
   - component: {fileID: 135773165679783766}
   m_Layer: 0
   m_Name: Eye(1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1705730258642556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4237660803163384}
+  m_Layer: 0
+  m_Name: SP Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,6 +154,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4237660803163384
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705730258642556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.015991211, y: -0.30200005, z: 1.37}
+  m_LocalScale: {x: 0.8, y: 0.2, z: 0.4}
+  m_Children: []
+  m_Father: {fileID: 4816999986450548}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4327833512917824
 Transform:
   m_ObjectHideFlags: 1
@@ -196,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367012704690388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 491, y: 15.7, z: -2888.4}
+  m_LocalPosition: {x: 563.2908, y: 23.51, z: -2977.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4327833512917824}
@@ -205,6 +235,7 @@ Transform:
   - {fileID: 4807438249541178}
   - {fileID: 4404265885844086}
   - {fileID: 4895078771278304}
+  - {fileID: 4237660803163384}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -501,6 +532,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114503996492284576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367012704690388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16591aabd0c9bcf48835f9060cba4700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 4057741457913456, guid: 7e05a5c707584b74f8b28c95335dbc73, type: 2}
+  speed: 1
+  distance: 0
+  Risespeed: 4
+  Maxy: 28
 --- !u!114 &114671039276951344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,9 +559,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56131cbdf3bb0f8439524d25451f86f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitMarker: {fileID: 8300000, guid: ecfd49c62985afb4089ddbc77e4b21a2, type: 3}
+  a_AudioSource: {fileID: 82819911808670428, guid: 7e05a5c707584b74f8b28c95335dbc73,
+    type: 2}
+  Player: {fileID: 4057741457913456, guid: 7e05a5c707584b74f8b28c95335dbc73, type: 2}
   health: 1
-  Count: 0
+  damage: 1
 --- !u!114 &114678606116131660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367012704690388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff34556b5ede0d43b8e8bf6c1fc5cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 2
+  huntdistance: 300
+  distance: 0
+--- !u!114 &114821359759995314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,13 +588,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1367012704690388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff34556b5ede0d43b8e8bf6c1fc5cfe, type: 3}
+  m_Script: {fileID: 11500000, guid: e5ed201054b1dd24a8f733bd7862dad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4030193626573970, guid: 6e6e9945f0f5ae945b99bc7b62611dad, type: 2}
-  speed: 13
-  huntdistance: 30
-  distance: 0
+  Fire: {fileID: 1977846938628226, guid: 395eb8b60d117564db5cb7b3364df975, type: 2}
+  Mouth: {fileID: 1705730258642556}
+  speed: 25
 --- !u!135 &135254022474629420
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -561,7 +626,7 @@ SphereCollider:
   m_GameObject: {fileID: 1739115465577406}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

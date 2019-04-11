@@ -26,10 +26,18 @@ public class Portal : MonoBehaviour {
 
     }
 
- 
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        if (Player==null)
+        {
+            Player = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.Instance.gameObject;
+        }
+    }
+
+
+    // Update is called once per frame
+    void Update () {
         transform.Rotate(new Vector3(1, 0, 0), xspeed *Time.deltaTime);
         transform.Rotate(new Vector3(0, 1, 0), yspeed * Time.deltaTime);
         transform.Rotate(new Vector3(0, 0, 1), zspeed * Time.deltaTime);
