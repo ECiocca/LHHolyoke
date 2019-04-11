@@ -548,6 +548,7 @@ MonoBehaviour:
   distance: 0
   Risespeed: 4
   Maxy: 28
+  Rose: 0
 --- !u!114 &114671039276951344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -559,10 +560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56131cbdf3bb0f8439524d25451f86f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitMarker: {fileID: 8300000, guid: ecfd49c62985afb4089ddbc77e4b21a2, type: 3}
-  a_AudioSource: {fileID: 82819911808670428, guid: 7e05a5c707584b74f8b28c95335dbc73,
-    type: 2}
-  Player: {fileID: 4057741457913456, guid: 7e05a5c707584b74f8b28c95335dbc73, type: 2}
   health: 1
   damage: 1
 --- !u!114 &114678606116131660
@@ -591,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ed201054b1dd24a8f733bd7862dad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fire: {fileID: 1977846938628226, guid: 395eb8b60d117564db5cb7b3364df975, type: 2}
+  Fire: {fileID: 114434185852547524, guid: 395eb8b60d117564db5cb7b3364df975, type: 2}
   Mouth: {fileID: 1705730258642556}
   speed: 25
 --- !u!135 &135254022474629420

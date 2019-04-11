@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   armspeed: 100
-  Snowball: {fileID: 1726032059562592, guid: 3ff55a9819a05ec41a720c2bd14961ef, type: 2}
+  Snowball: {fileID: 114307318199996758, guid: 3ff55a9819a05ec41a720c2bd14961ef, type: 2}
   Spawnpoint: {fileID: 1462635527752290}
   height: 30
   horizantal: 10

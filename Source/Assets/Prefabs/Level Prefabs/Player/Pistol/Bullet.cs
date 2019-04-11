@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour {
     public AudioClip nuke;
     public AudioSource soundPlayer;
 
+    public bool bEnemyProjectile = false;
+
 	// Use this for initialization
 	void Start () {
         Invoke("Destroy",lifespan);
@@ -30,10 +32,16 @@ public class Bullet : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         BulletKills bk = collision.gameObject.GetComponentInParent<BulletKills>();
-        if (bk != null)
+        Death de = collision.gameObject.GetComponentInParent<Death>();
+
+        if (!bEnemyProjectile && bk != null)
         {
-            Debug.Log("Hit!");
-            bk.health -= Damage;
+            bk.TakeDamage(Damage);
+            Destroy();
+        }
+        else if (bEnemyProjectile && de != null)
+        {
+            de.TakeDamage(Damage);
             Destroy();
         }
         else if (!(collision.gameObject.tag == "Player"))

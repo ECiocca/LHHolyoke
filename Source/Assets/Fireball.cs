@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour {
-    public GameObject Fire;
+    public Bullet Fire;
     public GameObject Mouth;
 
     public float speed = 10;
@@ -21,7 +21,7 @@ public class Fireball : MonoBehaviour {
             Firerate -= Time.deltaTime;
         if (Firerate <= 0)
         {
-            GameObject go = GameObject.Instantiate(Fire);
+            GameObject go = GameObject.Instantiate(Fire.gameObject);
             go.transform.position = Mouth.transform.position;
             go.GetComponent<Rigidbody>().AddForce(Mouth.transform.forward * speed, ForceMode.Impulse);
 

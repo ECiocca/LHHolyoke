@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour{
+public class Death : MonoBehaviour
+{
 
     public GameObject Player;
     public GameObject Camera;
@@ -23,7 +24,7 @@ public class Death : MonoBehaviour{
         deathUI.SetActive(false);
         Health myHealth = this.gameObject.GetComponent<Health>();
         CurrentHealth = myHealth.StartHealth;
-        
+
     }
 
     public void Update()
@@ -66,26 +67,16 @@ public class Death : MonoBehaviour{
     }
 
 
-
-    private void OnCollisionEnter(Collision other)
+    public void TakeDamage(float fDamage)
     {
-        
-        if (other.gameObject.tag == "Damage")
+        if (fDamage > 0)
         {
-            Bullet TheBullet = other.gameObject.GetComponent<Bullet>();
-            Health myHealth = this.gameObject.GetComponent<Health>();
-
-
-            if (TheBullet != null)
-            {
-                CurrentHealth -= TheBullet.Damage;
-
-                HCooldown = 5;
-                
-            }
+            CurrentHealth -= fDamage;
+            HCooldown = 5;
         }
+    }
 
-       
-    }
-    }
+
+
+}
 

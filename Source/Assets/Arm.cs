@@ -5,7 +5,7 @@ using UnityEngine;
 public class Arm : MonoBehaviour {
     public Transform target;
     public float armspeed= 100;
-    public GameObject Snowball;
+    public Bullet Snowball;
     public GameObject Spawnpoint;
     
 
@@ -54,7 +54,7 @@ public class Arm : MonoBehaviour {
             if (timer >= time)
 
             {
-                GameObject go = GameObject.Instantiate(Snowball);
+                GameObject go = GameObject.Instantiate(Snowball.gameObject);
                 go.transform.position = Spawnpoint.transform.position;
                 Targetting myTarget = go.GetComponent<Targetting>();
                 if (myTarget != null)

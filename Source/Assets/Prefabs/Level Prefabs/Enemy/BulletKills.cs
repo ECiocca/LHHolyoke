@@ -25,7 +25,11 @@ public class BulletKills : MonoBehaviour {
     }
 
 
-    
+    public void TakeDamage(float fDamage)
+    {
+        health -= fDamage;
+    }
+
 
     // Update is called once per frame
     void Update() {
