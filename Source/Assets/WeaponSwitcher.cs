@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponSwitcher : MonoBehaviour {
+public class WeaponSwitcher : SingletonBehavior<WeaponSwitcher> {
 
     public int weaponnumber = 0;
 
