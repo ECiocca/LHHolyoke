@@ -2,45 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour {
+public class Melee : MonoBehaviour {
     public float lifespan = 2.0F;
     public float Damage = 20;
-    public AudioClip nuke;
-    public AudioSource soundPlayer;
+
+    List<BulletKills> _damagedGuys = new List<BulletKills>();
 
 	// Use this for initialization
 	void Start () {
         Invoke("Destroy",lifespan);
-        if (soundPlayer != null)
-        {
-            soundPlayer.clip = nuke;
-            soundPlayer.Play();
-        }
-
-
+        Debug.Log("MAKE THE PAIN");
     }
 
     // Update is called once per frame
     void Destroy()
     {
         GameObject.Destroy(this.gameObject);
-        
+        Debug.Log("PAIN GONE");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         BulletKills bk = collision.gameObject.GetComponentInParent<BulletKills>();
-        if (bk != null)
+        if (bk!=null)
         {
             Debug.Log("Hit!");
-            bk.health -= Damage;
-            Destroy();
-        }
-        else if (!(collision.gameObject.tag == "Player"))
-        {
-            Destroy();
+            if (!_damagedGuys.Contains(bk))
+            {
+                _damagedGuys.Add(bk);
+                bk.health -= Damage;
+                Debug.Log("Whack!");
+//                Destroy();
+            }
         }
     }
+
+
     void Update () {
 
 		

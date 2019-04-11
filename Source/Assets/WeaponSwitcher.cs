@@ -58,6 +58,11 @@ public class WeaponSwitcher : MonoBehaviour {
             weaponnumber = 3;
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            weaponnumber = 4;
+        }
+
         if (lastselected != weaponnumber)
         {
             SelectWeapon();

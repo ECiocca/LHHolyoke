@@ -10,6 +10,7 @@ public class BulletKills : MonoBehaviour {
     // Use this for initialization
     private void OnCollisionEnter(Collision collision)
     {
+        /*
         if (collision.gameObject.tag == "Bullet")
         {
             health -= damage;
@@ -20,6 +21,7 @@ public class BulletKills : MonoBehaviour {
                 }
             }
         }
+        */
     }
 
 
@@ -27,5 +29,9 @@ public class BulletKills : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (health <= 0)
+        {
+            GameObject.Destroy(this.gameObject);
+        }
     }
 }
