@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour {
     public int CurrentAmmo;
-    public void Shoot() {
-        CurrentAmmo -= 1;
-            }
+    public virtual void Shoot() {
+        }
 
+    public virtual void EndShoot() { }
+
+    public virtual bool IsAuto() { return false; }
+    public virtual bool IsMelee() { return false; }
+
+    public virtual void DoReload()
+    { }
+
+    public virtual void ReloadEnd()
+    {
+        //Change so theres an if statement here checking if you have the ammo
+        CurrentAmmo = MaxAmmo();
+    }
 
 
     public virtual bool CanScope()
@@ -48,5 +60,8 @@ public class Gun : MonoBehaviour {
     {
         return 1;
     }
-    
+
+    public float speed = 70.0F;
+
+
 }

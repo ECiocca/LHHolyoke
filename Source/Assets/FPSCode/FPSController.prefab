@@ -1013,6 +1013,7 @@ GameObject:
   - component: {fileID: 82093262901391332}
   - component: {fileID: 114017224333909076}
   - component: {fileID: 114682058510290676}
+  - component: {fileID: 114776915984222478}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -1789,7 +1790,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4201313803814284}
   - component: {fileID: 95039104332339686}
-  - component: {fileID: 114539832254482818}
   - component: {fileID: 114874385463432694}
   m_Layer: 0
   m_Name: 1912
@@ -2274,7 +2274,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4982808308280268}
   - component: {fileID: 95036148376431122}
-  - component: {fileID: 114738751622975756}
   - component: {fileID: 114001456538641212}
   m_Layer: 0
   m_Name: hksmg2s
@@ -3248,7 +3247,6 @@ GameObject:
   - component: {fileID: 4724832222109380}
   - component: {fileID: 95453754471783680}
   - component: {fileID: 114073914153493602}
-  - component: {fileID: 114807425837705564}
   m_Layer: 0
   m_Name: m16-a1
   m_TagString: Untagged
@@ -6079,7 +6077,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4660585847350922}
   - component: {fileID: 95275988229339036}
-  - component: {fileID: 114960057190515396}
   - component: {fileID: 114057050400035774}
   m_Layer: 0
   m_Name: crowbar
@@ -6963,7 +6960,6 @@ GameObject:
   - component: {fileID: 4096358409854818}
   - component: {fileID: 95312715084050906}
   - component: {fileID: 114965357821813994}
-  - component: {fileID: 114129061215176892}
   m_Layer: 0
   m_Name: stakeout2s
   m_TagString: Untagged
@@ -16446,6 +16442,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentAmmo: 0
+  speed: 70
+  Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
+  Gunend: {fileID: 1350003623448616}
+  loop: {fileID: 8300000, guid: 5fbac013ce756e84da5843926773d28e, type: 3}
+  loopend: {fileID: 0}
+  Reload: {fileID: 8300000, guid: 3a0f5d52bac01514db8ce8c480a41c40, type: 3}
+  m_AudioSource: {fileID: 82980005153053236}
 --- !u!114 &114017224333909076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16490,6 +16493,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentAmmo: 0
+  speed: 70
+  Hitend: {fileID: 1907121514596724}
+  Pain: {fileID: 1748896147627030, guid: a15e91d0bb977b04ea37c61eaec32527, type: 2}
+  nuke: {fileID: 8300000, guid: c2010e05370202b4485bd4496f12ef49, type: 3}
+  m_AudioSource: {fileID: 82189311573286556}
 --- !u!114 &114073914153493602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16502,49 +16510,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentAmmo: 30
---- !u!114 &114129061215176892
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1944271283901888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2cf817cde283f48bd17e8be6037d5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
-  Gunend: {fileID: 1527934297158726}
-  view: {fileID: 20649461692118962}
-  numberofbullets: 9
   speed: 70
-  spreadx: 6
-  spready: 6
-  nuke: {fileID: 8300000, guid: 6cfe78a1808339a47a36cf3df01f1d7d, type: 3}
-  Reload: {fileID: 8300000, guid: 533c57f91c7ae9c458a74e0298a43353, type: 3}
-  m_AudioSource: {fileID: 82544230513686102}
-  ReloadRepeat: {fileID: 8300000, guid: 227b56f91415f11488765779b3a761c9, type: 3}
-  ReloadFinish: {fileID: 8300000, guid: 533c57f91c7ae9c458a74e0298a43353, type: 3}
-  ThisGun: {fileID: 114965357821813994}
-  Magnifucation: 0
---- !u!114 &114539832254482818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1259415487014076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450d6c541218f564d910dd90552c3e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
-  Gunend: {fileID: 1443940057322594}
-  speed: 70
-  nuke: {fileID: 8300000, guid: 42578b27c040ca5409eddd94a2094da9, type: 3}
-  Reload: {fileID: 8300000, guid: 3f9ef440d1fd53242a0884690fa22b38, type: 3}
-  m_AudioSource: {fileID: 82530405862207224}
-  ThisGun: {fileID: 114874385463432694}
+  Gunend: {fileID: 1231652391216738}
+  loop: {fileID: 8300000, guid: fe5b41a4fbdee2a43a08ab8dc36d0c76, type: 3}
+  loopend: {fileID: 0}
+  Reload: {fileID: 8300000, guid: a8026c0165e25744080782f65f4a3875, type: 3}
+  m_AudioSource: {fileID: 82681356955010560}
 --- !u!114 &114620144881240510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16689,46 +16661,17 @@ MonoBehaviour:
   deathUI: {fileID: 0}
   CurrentHealth: 100
   HCooldown: -0.0023718476
---- !u!114 &114738751622975756
+--- !u!114 &114776915984222478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1317657240326774}
+  m_GameObject: {fileID: 1140235696230558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1576751468c3c0459f8bb9127a90b72, type: 3}
+  m_Script: {fileID: 11500000, guid: 450d6c541218f564d910dd90552c3e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
-  Gunend: {fileID: 1350003623448616}
-  speed: 70
-  fireRate: 0.09
-  loop: {fileID: 8300000, guid: 5fbac013ce756e84da5843926773d28e, type: 3}
-  loopend: {fileID: 0}
-  Reload: {fileID: 8300000, guid: 3a0f5d52bac01514db8ce8c480a41c40, type: 3}
-  m_AudioSource: {fileID: 82980005153053236}
-  ThisGun: {fileID: 114001456538641212}
---- !u!114 &114807425837705564
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1447690981117320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1576751468c3c0459f8bb9127a90b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
-  Gunend: {fileID: 1231652391216738}
-  speed: 70
-  fireRate: 0.08
-  loop: {fileID: 8300000, guid: fe5b41a4fbdee2a43a08ab8dc36d0c76, type: 3}
-  loopend: {fileID: 0}
-  Reload: {fileID: 8300000, guid: a8026c0165e25744080782f65f4a3875, type: 3}
-  m_AudioSource: {fileID: 82681356955010560}
-  ThisGun: {fileID: 114073914153493602}
 --- !u!114 &114874385463432694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16741,27 +16684,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentAmmo: 9
---- !u!114 &114960057190515396
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1847170112372970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1e546ae4a620ff4db87573181ada3a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hitend: {fileID: 1907121514596724}
-  view: {fileID: 20649461692118962}
-  Pain: {fileID: 1748896147627030, guid: a15e91d0bb977b04ea37c61eaec32527, type: 2}
-  Damage: 1
-  speed: 1
-  nuke: {fileID: 8300000, guid: c2010e05370202b4485bd4496f12ef49, type: 3}
-  m_AudioSource: {fileID: 82189311573286556}
-  ThisGun: {fileID: 114057050400035774}
-  indexcrowbar: 0
-  Magnifucation: 0
+  speed: 70
+  Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
+  Gunend: {fileID: 1443940057322594}
+  nuke: {fileID: 8300000, guid: 42578b27c040ca5409eddd94a2094da9, type: 3}
+  Reload: {fileID: 8300000, guid: 3f9ef440d1fd53242a0884690fa22b38, type: 3}
+  m_AudioSource: {fileID: 82530405862207224}
 --- !u!114 &114965357821813994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16774,6 +16702,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentAmmo: 0
+  speed: 70
+  Bullet: {fileID: 1392667368079602, guid: 3a21be1267527e249965f87b702d1ca3, type: 2}
+  Gunend: {fileID: 1527934297158726}
+  nuke: {fileID: 8300000, guid: 6cfe78a1808339a47a36cf3df01f1d7d, type: 3}
+  Reload: {fileID: 8300000, guid: 533c57f91c7ae9c458a74e0298a43353, type: 3}
+  ReloadRepeat: {fileID: 8300000, guid: 227b56f91415f11488765779b3a761c9, type: 3}
+  ReloadFinish: {fileID: 8300000, guid: 533c57f91c7ae9c458a74e0298a43353, type: 3}
+  m_AudioSource: {fileID: 82544230513686102}
 --- !u!124 &124890370150399784
 Behaviour:
   m_ObjectHideFlags: 1

@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour {
 
-    public GameObject Bullet;
-    public GameObject Gunend;
-
-    public float speed = 1.0F;
-    
-    float x = 1;
+    float reload_time = 0.0F;
     bool is_reloading = false;
 
-    public AudioClip nuke;
-    public AudioClip Reload;
-    public AudioSource m_AudioSource;
-
-    public Gun ThisGun;
+    bool did_fire = false;
 
     float Firerate = 0; //Needs to get pulled from gun class
 
@@ -24,82 +15,70 @@ public class Shoot : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        ThisGun = this.gameObject.GetComponent<Gun>();
-        
+
         //Magnifucation = view.fieldOfView;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        Gun ThisGun = WeaponSwitcher.Instance.CurrentGun;
 
         if (Firerate > 0) {
             Firerate -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0))
+
+        bool bAuto = ThisGun.IsAuto();
+        bool bShoot = false;
+
+        if (bAuto)
+        {
+            bShoot = (Input.GetKey(KeyCode.G) || Input.GetMouseButton(0));
+        }
+        else
+        {
+            bShoot = (Input.GetKeyDown(KeyCode.G) || Input.GetMouseButtonDown(0));
+        }
+
+        if (bShoot)
         {
             //don't do it if you are reloading
-            if ((ThisGun.CurrentAmmo > 0)&&(!is_reloading))
+            if ((ThisGun.CurrentAmmo > 0 || ThisGun.IsMelee()) && (!is_reloading) && (Firerate <= 0))
             {
-                if (Firerate <= 0)
-                {
-                    
-                    GameObject go = GameObject.Instantiate(Bullet);
-                    ThisGun.Shoot();
-                    go.transform.position = Gunend.transform.position;
-                    go.GetComponent<Rigidbody>().AddForce(Gunend.transform.forward * speed, ForceMode.Impulse);
+                did_fire = true;
+                ThisGun.Shoot();
+                Firerate = ThisGun.FireRate();
 
-                    m_AudioSource.clip = nuke;
-                    m_AudioSource.Play();
-
-                    Animator anm = GetComponent<Animator>();
-                    if (anm != null)
-                    {
-                        anm.Play("Shoot");
-                    }
-
-
-
-                    Firerate = ThisGun.FireRate();
-                    
-
-                }
             }
 
         }
         else
         {
+            if (did_fire)
+            {
+                ThisGun.EndShoot();
+                did_fire = false;
+            }
             if (Input.GetKeyDown(KeyCode.R)&&(!is_reloading)) //If you press R
             {
                 if (ThisGun.CurrentAmmo < ThisGun.MaxAmmo()) //If your clip isn't full
                 {
-                    x = ThisGun.RealoadingSpeed();
+                    ThisGun.DoReload();
+                    reload_time = ThisGun.RealoadingSpeed();
                     is_reloading = true;
-
-                    Animator anm = GetComponent<Animator>();
-                    if (anm != null)
-                    {
-                        anm.Play("Reload");
-                    }
-
-                    m_AudioSource.clip = Reload;
-                    m_AudioSource.Play();
-
 
                 }
             }
         }
         if (is_reloading) //If you aren't already reloading AND does counter for how long the reload is
         {
-            x -= Time.deltaTime;
-            Debug.Log(x);
+            reload_time -= Time.deltaTime;
 
-            if (x <= 0)
+            if (reload_time <= 0)
             {
-                //Change so theres an if statement here checking if you have the ammo
-                ThisGun.CurrentAmmo = ThisGun.MaxAmmo();
-                x = 1;
+                ThisGun.ReloadEnd();
+                reload_time = 0;
                 is_reloading = false;
 
             }
